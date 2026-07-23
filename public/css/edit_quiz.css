@@ -1,0 +1,43 @@
+/* Container pour chaque question */
+.question-group {
+    margin-bottom: 20px;
+}
+
+/* Container pour les réponses */
+.responses-group {
+    margin-top: 10px;
+}
+
+/* Alignement horizontal des éléments de réponse */
+.response-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.response-item .form-control {
+    margin-right: 10px;
+    flex: 1;
+}
+
+.response-checkbox {
+    margin-left: 10px;
+}
+
+
+.edit-quiz-btn{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.edit-quiz-retour{
+    margin-bottom: 10px;
+}
+
+.edit-quiz-retour a {
+    font-size: 17px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}

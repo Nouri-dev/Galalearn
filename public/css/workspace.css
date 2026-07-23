@@ -1,0 +1,230 @@
+/* public/css/workspace.css */
+
+/* mySpace.blade.php */
+.main-workspace {
+    display: flex; 
+    min-height: 100vh;
+}
+
+#sidebar {
+   
+    min-height: 100%;
+    width: 250px; 
+    background-color: #3D2A5B; 
+    padding: 20px 0; 
+    overflow-y: auto; 
+    position : relative; 
+    top: 0;
+    left: 0;
+    display: flex; 
+    flex-direction: column; 
+    z-index: 1; 
+    justify-content: center;
+    border: 3px solid rgb(0, 0, 0);
+}
+
+/* Styles pour les éléments de menu */
+#sidebar .nav {
+    display: flex;
+    flex-direction: column; 
+}
+
+/* Styles pour les sous-menus */
+#sidebar .nav .collapse {
+    display: none; 
+    padding-left: 20px; 
+    
+}
+
+.nav flex-column collapse {
+    margin-bottom: 50px;
+}
+
+#sidebar .nav .nav-item  {
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.containerWorkspace {
+    margin-left: 250px; 
+    padding: 20px; 
+    flex: 1; 
+}
+
+#sidebar .nav .collapse.show {
+    display: flex; 
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.nav-link:hover{
+    background-color: #6D3F91;
+    color: #ffffff;
+    border-radius: 5px;
+} 
+
+#sidebar ul {
+    list-style-type:none;
+    margin-bottom: 3px;
+}
+#profil-toggle {
+    margin-bottom: 4px;
+}
+.nav-item ul{
+    margin-top: 10px;
+}
+
+
+
+/* index_result.blade.php */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+
+
+/* delete_comment.blade.php */
+
+
+.delete-comment-group {
+    margin-bottom: 15px; 
+}
+
+
+.delete-comment-label {
+    font-weight: bold; 
+    display: block; 
+    margin-bottom: 5px; 
+}
+
+
+.delete-comment-select {
+    width: 100%; 
+    padding: 8px; 
+    margin-bottom: 15px; 
+}
+
+
+/* delete category */
+
+.delete-category-btn {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#text-delete-choice {
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+
+
+/* create category  */
+
+.create-category-btn{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+
+
+/* delete user  */
+
+.delete-user-btn {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+/* role create et delete  */
+
+.role-user-btn {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+
+
+/* quizz create */
+
+/* Style pour les éléments de la question */
+.question-group {
+    margin-bottom: 20px;
+}
+
+.responses-group {
+    margin-top: 10px;
+}
+
+.response-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.response-item .form-control {
+    margin-right: 10px;
+    flex: 1;
+}
+
+.response-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.response-checkbox input[type="checkbox"] {
+    margin-left: 5px;
+}
+
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.quizz-form-btn {
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+/* Style pour le bouton de suppression */
+.delete-comment-btn {
+    background-color: #dc3545; 
+    border-color: #dc3545; 
+    padding: 10px 20px; 
+    color: white; 
+    cursor: pointer; 
+}
+
+/* Style pour le lien de retour */
+.delete-comment-return {
+    margin-top: 15px; 
+}
+
+.delete-comment-return-link {
+    text-decoration: none; 
+    color: #007bff; 
+    font-weight: bold; 
+}
