@@ -41,8 +41,16 @@ class DatabaseSeeder extends Seeder
             'user_id' => $administratorUser->user_id,
         ]);
 
+        Instructor::firstOrCreate([
+            'user_id' => $administratorUser->user_id,
+        ]);
 
-        
+        Student::firstOrCreate([
+            'user_id' => $administratorUser->user_id,
+        ]);
+
+
+
         /* Faux utilisateurs */
 
         $users = User::factory(10)->create();
@@ -65,7 +73,7 @@ class DatabaseSeeder extends Seeder
             }
         });
 
-       
+
         /* Catégories */
 
         $categories = Category::factory(5)->create();
@@ -74,9 +82,9 @@ class DatabaseSeeder extends Seeder
             Category::factory(3)->withParent($category->category_id)->create();
         });
 
-       
+
         /*  Quiz / Contenus */
-        
+
         $quizzes = Quiz::factory(10)->create();
 
         Content::factory(20)->create();
@@ -96,15 +104,15 @@ class DatabaseSeeder extends Seeder
             }
         });
 
-       
-       /*  Blog */
-        
+
+        /*  Blog */
+
         Blog::factory(10)->create();
         Comment::factory(20)->create();
 
-     
-      /*   Résultats */
-       
+
+        /*   Résultats */
+
         $students = Student::pluck('user_id');
         $quizzes = Quiz::pluck('quiz_id');
 
@@ -142,8 +150,8 @@ class DatabaseSeeder extends Seeder
             Result::insert($resultsToCreate);
         });
 
- 
-       /*  Réponses des étudiants */
+
+        /*  Réponses des étudiants */
 
         DB::transaction(function () {
 

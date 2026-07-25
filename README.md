@@ -51,7 +51,7 @@ Le projet utilise l'architecture MVC de Laravel afin de séparer la logique mét
 
 ### 1. Cloner le projet
 
-git clone URL_DU_REPOSITORY
+git clone https://github.com/Nouri-dev/Galalearn.git
 
 ### 2. Installer les dépendances
 
@@ -67,17 +67,20 @@ Puis renseigner vos informations dans le fichier .env :
 
 - Les identifiants de votre base de données MySQL :
 
+```env
 DB_DATABASE=GalaLearn
 DB_USERNAME=root
 DB_PASSWORD=votre_mot_de_passe
+```
 
 - Si vous souhaitez tester l'envoi d'emails lors de l'inscription, créez un compte gratuit Mailtrap et renseignez vos identifiants SMTP :
 
+```env
 MAIL_HOST=sandbox.smtp.mailtrap.io
 MAIL_PORT=2525
 MAIL_USERNAME=votre_identifiant
 MAIL_PASSWORD=votre_mot_de_passe
-
+```
 
 Générer la clé Laravel :
 php artisan key:generate
@@ -85,13 +88,15 @@ php artisan key:generate
 ### 4. Base de données
 
 Créer votre base de données puis lancer :
-php artisan migrate --seed
+php artisan migrate:fresh --seed
 
 ### 5. Frontend
 
+Installer les dépendances frontend :
 npm install
 
-npm run dev
+Compiler les assets :
+npm run build
 
 ### 6. Lancer l'application
 
@@ -104,11 +109,16 @@ http://127.0.0.1:8000
 
 ## Compte de démonstration
 
-Un compte administrateur est disponible afin de tester les fonctionnalités de gestion :
+Un compte de démonstration est disponible afin de tester les différentes fonctionnalités de l'application :
 
-**Administrateur**
+**Compte de démonstration (multi-rôles)**
 
 - Email : admin@example.com
 - Mot de passe : Password6787
+
+Rôles disponibles :
+- Administrateur
+- Enseignant
+- Étudiant
 
 Ce compte est uniquement destiné à la démonstration du projet.
